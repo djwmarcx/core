@@ -29,6 +29,10 @@
 #define STM32_F3_PLATFORM
 #endif
 
+#if defined(STM32G0B1xx) || defined(STM32G0B0xx) || defined(STM32G071xx)
+#define STM32_G0_PLATFORM
+#endif
+
 #if defined(STM32F401xC) || defined(STM32F401xE) || defined(STM32F407xx) || defined(STM32F411xE) || \
     defined(STM32F412Vx) || defined(STM32F429xx) || defined(STM32F446xx)
 #define STM32_F4_PLATFORM
@@ -42,7 +46,7 @@
 #define STM32_H7_PLATFORM
 #endif
 
-#if defined(STM32_F1_PLATFORM) || defined(STM32_F3_PLATFORM) || defined(STM32_F4_PLATFORM) || defined(STM32_F7_PLATFORM) || defined(STM32_H7_PLATFORM)
+#if defined(STM32_F1_PLATFORM) || defined(STM32_F3_PLATFORM) || defined(STM32_G0_PLATFORM) || defined(STM32_F4_PLATFORM) || defined(STM32_F7_PLATFORM) || defined(STM32_H7_PLATFORM)
 #define STM32_PLATFORM
 #endif
 
